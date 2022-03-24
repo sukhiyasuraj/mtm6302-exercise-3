@@ -95,8 +95,9 @@ console.log($name.value)
 
 $form.addEventListener('submit', function(e){
     
+    
 
-
+    $dt.style.display = 'none'
     
     localStorage.clear();
 
@@ -129,5 +130,11 @@ function dt(){
 }
 
 
-
+$modal.addEventListener('click', function(e){
+    if(e.target.dataset.bsDismiss) {
+      $form.reset()
+  
+      $modal.style.display = 'none'
+    }
+  })
 
