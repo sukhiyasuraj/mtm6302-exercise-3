@@ -14,6 +14,8 @@ const $submit = document.getElementById('submit')
 const $save = document.getElementById('save')
 //Date and Time div
 const $dt = document.getElementById('dt')
+//Modal 
+const $modal = document.getElementById('modal')
 
 
 function job(){
@@ -49,6 +51,11 @@ html.push(`<h1>Job Listing</h1>
 </form> 
 
     `)
+}
+
+
+function resetForm(){
+    push.HTML(``)
 }
 
 
@@ -90,11 +97,16 @@ $form.addEventListener('submit', function(e){
     
 
 
-    window.onbeforeunload = function (e) {
-        localStorage.clear();
-    };
+    
+    localStorage.clear();
 
     console.log('submit')
+
+    $modal.style.display = 'block'
+
+    form.reset()
+
+    e.preventDefault();
     
 
 })
