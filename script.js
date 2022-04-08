@@ -73,6 +73,7 @@ function resetForm(){
             name: $name.value
         }
         localStorage.setItem('listingData', JSON.stringify(listingData))
+        
         dt()
         
 
@@ -94,7 +95,6 @@ console.log($name.value)
 //Submit Button
 
 $form.addEventListener('submit', function(e){
-    
     
 
     $dt.style.display = 'none'
